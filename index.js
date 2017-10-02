@@ -26,3 +26,9 @@ function createRecipe() {
   var recipeHTML = template(recipe);
   document.getElementById('main').innerHTML = recipeHTML;
 }
+
+function displayEditForm() {
+  var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  var result = template();
+  document.getElementById("edit-form").innerHTML += result;
+}
